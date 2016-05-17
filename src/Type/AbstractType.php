@@ -169,4 +169,26 @@ abstract class AbstractType
         return ob_get_clean();
     }
 
+    /**
+     * Saves the BezahlCode QR-Code as PNG image with BezahlCode Logo
+     *
+     * @param string $file
+     */
+    public function saveBezahlCodeWithLogo($file)
+    {
+        QRcode::pngWithBezahlCode($this->getBezahlCodeURI(), $file, $this->qrSettings['level'], $this->qrSettings['size'], $this->qrSettings['margin'], false);
+    }
+
+    /**
+     * Returns the BezahlCode QR-Code as PNG image data with BezahlCode Logo.
+     *
+     * @return string Binary PNG image data
+     */
+    public function getBezahlCodeWithLogo()
+    {
+        ob_start();
+        QRcode::pngWithBezahlCode($this->getBezahlCodeURI(), false, $this->qrSettings['level'], $this->qrSettings['size'], $this->qrSettings['margin'], false);
+        return ob_get_clean();
+    }
+
 }
