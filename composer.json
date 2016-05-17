@@ -1,8 +1,8 @@
 {
-    "name" : "schnti/bezahlcode",
+    "name" : "mjaschen/bezahlcode",
     "description" : "BezahlCode Generator Library",
     "keywords" : ["bezahlcode", "payment", "qrcode"],
-    "homepage" : "https://github.com/schnti/bezahlcode",
+    "homepage" : "https://github.com/mjaschen/bezahlcode",
     "type" : "library",
     "license" : "MIT",
     "authors" : [
